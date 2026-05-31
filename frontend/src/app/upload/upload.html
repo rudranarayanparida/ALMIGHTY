@@ -1,0 +1,51 @@
+<div class="main">
+
+  <h1 class="title"> Malware Scanner</h1>
+
+  <!-- UPLOAD BOX -->
+  <div class="upload-box">
+    <p>Drag & Drop File Here</p>
+    <p>or</p>
+
+    <input type="file" (change)="onFileSelected($event)">
+
+    <div class="file-name" *ngIf="selectedFile">
+      {{ selectedFile.name }}
+    </div>
+  </div>
+
+  <!-- BUTTON -->
+  <button class="scan-btn" (click)="upload()" [disabled]="loading">
+    {{ loading ? 'Scanning...' : 'Scan File' }}
+  </button>
+
+  <!-- LOADING TEXT -->
+  <p *ngIf="loading" class="loading-text">Scanning file... please wait</p>
+
+  <!-- RESULT -->
+  <div class="result-card" *ngIf="result">
+
+    <h2>Scan Result</h2>
+
+    <p><strong>File:</strong> {{ result.file_name }}</p>
+
+    <p>
+      <strong>Status:</strong>
+      <span [ngClass]="result.status === 'malicious' ? 'bad' : 'good'">
+        {{ result.status | uppercase }}
+      </span>
+    </p>
+
+    <p><strong>Confidence:</strong> {{ result.confidence }}</p>
+
+    <hr>
+
+    <p><strong> AI Result:</strong> {{ result.ai_result }}</p>
+    <p><strong> VirusTotal:</strong> {{ result.vt_result }}</p>
+
+  </div>
+
+  <!-- DEBUG (REMOVE LATER) -->
+  <!-- <pre>{{ result | json }}</pre> -->
+
+</div>

@@ -1,0 +1,29 @@
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>Almighty</h2>
+
+    <a routerLink="/home">Home</a>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/upload">Upload</a>
+
+    <button (click)="logout()">Logout</button>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <h3>Malware Detection System</h3>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+</div>

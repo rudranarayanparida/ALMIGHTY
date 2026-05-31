@@ -1,0 +1,105 @@
+/* 🌌 Background */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🧊 Glass Card */
+.login-box {
+  width: 350px;
+  padding: 40px;
+  border-radius: 16px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+}
+
+/* 🔥 Title */
+.login-box h2 {
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 25px;
+  opacity: 0.7;
+}
+
+/* 📥 Inputs */
+.input-group {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* 🚀 Button */
+/* Button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #00c6ff;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid white;
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 🔁 Toggle */
+.toggle {
+  margin-top: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #00c6ff;
+}
+
+.toggle:hover {
+  text-decoration: underline;
+}

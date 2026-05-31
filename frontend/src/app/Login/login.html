@@ -1,0 +1,66 @@
+<div class="auth-container">
+
+  <div class="login-box">
+
+    <!-- 🔥 Title -->
+    <h2>{{ isRegister ? 'Create Account' : 'Welcome Back' }}</h2>
+    <p class="subtitle">
+      {{ isRegister ? 'Register to get started' : 'Login to continue' }}
+    </p>
+
+    <!-- 👤 Username -->
+    <div class="input-group">
+      <input
+        type="text"
+        placeholder="Username"
+        [(ngModel)]="username"
+      />
+    </div>
+
+    <!-- 📧 Email (Register only) -->
+    <div class="input-group" *ngIf="isRegister">
+      <input
+        type="email"
+        placeholder="Email Address"
+        [(ngModel)]="email"
+      />
+    </div>
+
+    <!-- 🔒 Password -->
+    <div class="input-group">
+      <input
+        type="password"
+        placeholder="Password"
+        [(ngModel)]="password"
+      />
+    </div>
+
+    <!-- 🚀 Button -->
+    <button
+  class="submit-btn"
+  (click)="submit()"
+  [disabled]="loading"
+>
+
+  <span *ngIf="!loading">
+    {{ isRegister ? 'Register' : 'Login' }}
+  </span>
+
+  <span *ngIf="loading" class="spinner-container">
+    <span class="spinner"></span>
+    Please wait...
+  </span>
+
+    </button>
+
+    <!-- 🔁 Toggle -->
+    <p class="toggle" (click)="toggleMode()">
+      {{ isRegister
+        ? 'Already have an account? Login'
+        : 'New user? Register'
+      }}
+    </p>
+
+  </div>
+
+</div>

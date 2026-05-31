@@ -1,0 +1,60 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: #0a0f1c;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 10px 0;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #00d4ff;
+}
+
+.sidebar button {
+  margin-top: auto;
+  background: #ff4d4d;
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MAIN */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOPBAR */
+.topbar {
+  background: white;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+/* CONTENT */
+.content {
+  padding: 20px;
+  background: #f5f7fb;
+  flex: 1;
+}
